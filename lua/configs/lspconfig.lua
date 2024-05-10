@@ -1,10 +1,14 @@
--- EXAMPLE 
-local on_attach = require("nvchad.configs.lspconfig").on_attach
-local on_init = require("nvchad.configs.lspconfig").on_init
-local capabilities = require("nvchad.configs.lspconfig").capabilities
+-- import nvChad's lspconfig plugin to configure lsp's.
+local nvchadconfig = require("nvchad.configs.lspconfig")
 
-local lspconfig = require "lspconfig"
-local servers = { "html", "cssls" }
+local on_attach = nvchadconfig.on_attach
+local on_init = nvchadconfig.on_init
+local capabilities = nvchadconfig.capabilities
+
+local lspconfig = require "lspconfig" -- import lspconfig.lua file 
+                                      -- (from same directory)
+
+local servers = { "pyright" } -- List of LSPs to configure
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -12,12 +16,6 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
     on_init = on_init,
     capabilities = capabilities,
+    filetypes = {"python"}
   }
 end
-
--- typescript
-lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-}
