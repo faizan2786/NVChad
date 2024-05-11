@@ -1,3 +1,4 @@
+-- define and return all the plugins to load
 return {
   {
     "stevearc/conform.nvim",
@@ -6,7 +7,7 @@ return {
       require "configs.conform"
     end
   },
-  -- Setup Syntax highlighters for specific languages using tree-sitter
+  -- setup Syntax highlighters for specific languages using tree-sitter
   -- (i.e. this is equivalent of running `:TSInstall <language_name>`
   --        command in nvim`)
   {
@@ -19,7 +20,8 @@ return {
       }
     }
   },
-  -- install nvim plugins using nvChad's mason package managers
+  -- list nvim plugins to install using mason package manager.
+  -- this can be done by running command ':MasonInstallAll' in nvim
   {
     "williamboman/mason.nvim",
     opts = {
@@ -29,7 +31,8 @@ return {
       }
     }
   },
-  -- configure the python LSP to use it in python files
+  -- load the nvchad's lspconfig for lsp setup
+  -- and our local 'lspconfig' defined in the 'configs' folder
   {
     "neovim/nvim-lspconfig",
     config = function()

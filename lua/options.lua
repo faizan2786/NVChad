@@ -1,6 +1,6 @@
-require "nvchad.options"
+require "nvchad.options" --import nvchad repos' option file
 
--- add yours here!
+-- define custom options here!
 
 local o = vim.opt
 o.colorcolumn = "80"

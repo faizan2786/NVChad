@@ -5,10 +5,11 @@ local on_attach = nvchadconfig.on_attach
 local on_init = nvchadconfig.on_init
 local capabilities = nvchadconfig.capabilities
 
-local lspconfig = require "lspconfig" -- import lspconfig.lua file 
-                                      -- (from same directory)
+local lspconfig = require "lspconfig" -- define local variable for
+                                      -- the current config file
 
-local servers = { "pyright" } -- List of LSPs to configure
+-- List of LSPs to configure
+local servers = { "pyright" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
