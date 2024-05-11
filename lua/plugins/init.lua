@@ -15,10 +15,12 @@ return {
     opts = {
       ensure_installed = {
         "lua-language-server", "stylua",
-        "pyright",  -- an LSP for python
-        "mypy",     -- a null-ls tool for python
-        "ruff",     -- a null-ls tool for python
-        "clangd",   -- an LSP for C++
+        "pyright",  -- a lightweight LSP for python
+        "mypy",     -- a null-ls tool for python static type checking
+        "ruff",     -- a null-ls tool for python linting
+        "black",    -- an auto-formating tool for pyhton
+        "clangd",   -- a powerful LSP for C++
+                    -- (includes linting, static analysis, etc.)
       }
     }
   },
