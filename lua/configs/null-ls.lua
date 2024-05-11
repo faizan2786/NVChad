@@ -8,10 +8,11 @@ local opts = {
 
   -- list null-ls sources(i.e. language tools) to use
   sources = {
-    null_ls.builtins.formatting.black,  -- load the auto formatting tool
-    null_ls.builtins.diagnostics.mypy,  -- load null-ls' diagnostics tools
-    null_ls.builtins.diagnostics.ruff,  -- 'mypy' and 'ruff' for static type
-  },                                    -- checking and linting respectively.
+    null_ls.builtins.formatting.clang_format, -- c++ formatting tool
+    null_ls.builtins.formatting.black,    -- python formatting tool
+    null_ls.builtins.diagnostics.mypy,    -- load null-ls' diagnostics tools
+    null_ls.builtins.diagnostics.ruff,    -- 'mypy' and 'ruff' for static type
+  },                                      -- checking and linting respectively.
 
   -- configure auto-format on save
   on_attach = function(client, bufnr)

@@ -15,12 +15,13 @@ return {
     opts = {
       ensure_installed = {
         "lua-language-server", "stylua",
-        "pyright",  -- a lightweight LSP for python
-        "mypy",     -- a null-ls tool for python static type checking
-        "ruff",     -- a null-ls tool for python linting
-        "black",    -- an auto-formating tool for pyhton
-        "clangd",   -- a powerful LSP for C++
-                    -- (includes linting, static analysis, etc.)
+        "pyright",      -- a lightweight LSP for python
+        "mypy",         -- a null-ls tool for python static type checking
+        "ruff",         -- a null-ls tool for python linting
+        "black",        -- an auto-formating tool for pyhton
+        "clangd",       -- a powerful LSP for C++
+                        -- (includes linting, static analysis, etc.)
+        "clang-format"  -- a c++ formatter
       }
     }
   },
@@ -49,7 +50,7 @@ return {
   -- setup null-ls plugin for language tooling such as linters, formatters etc.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"}, -- file types
+    ft = {"python", "cpp"}, -- file types
     opts = function ()
       return require "configs.null-ls"  -- load the options from a custom 
                                         -- 'null-ls' config file
