@@ -27,7 +27,8 @@ return {
     opts = {
       ensure_installed = {
         "lua-language-server", "stylua",
-        "pyright" -- an LSP for python
+        "pyright",  -- an LSP for python
+        "clangd",   -- an LSP for C++
       }
     }
   },

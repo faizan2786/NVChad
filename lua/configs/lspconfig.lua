@@ -7,9 +7,14 @@ local capabilities = nvchadconfig.capabilities
 
 local lspconfig = require "lspconfig" -- define local variable for
                                       -- the current config file
-
 -- List of LSPs to configure
-local servers = { "pyright" }
+local servers = { "pyright", "clangd" }
+
+-- define filetypes for each server
+local filetypes = {
+  pyright = "python",
+  clangd = "cpp",
+}
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -17,6 +22,6 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
     on_init = on_init,
     capabilities = capabilities,
-    filetypes = {"python"}
+    filetypes = { filetypes[lsp] }
   }
 end
