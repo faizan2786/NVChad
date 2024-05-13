@@ -1,3 +1,4 @@
+local lazy = require "lazy"
 -- define and return all the plugins to load
 return {
   {
@@ -34,7 +35,7 @@ return {
       ensure_installed = {
         "vim", "lua", "vimdoc",
         "python", "cpp", "make",
-        "dockerfile", "query"
+        "dockerfile", "markdown", "markdown_inline",
       }
     }
   },
@@ -56,4 +57,10 @@ return {
                                         -- 'null-ls' config file
     end,
   },
+  -- setup vim tmux navigator plugin
+  -- (for seamlessly navigate between vim and tmux panes)
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false, -- always load this plugin
+  }
 }
