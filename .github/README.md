@@ -29,3 +29,5 @@ git clone https://github.com/faizan2786/NVChad.git ~/.config/nvim
 - Now, within the neovim terminal, run the command `:MasonInstallAll` to install all the mason packages.
 - Once Mason finishes all the package installation, quit the Neovim  using `:q` command and reopen.
 - **That's it**! It should be ready to use.
+
+**PS:** Refer to my [tmux-config](https://github.com/faizan2786/tmux-config/) repo to get a complimentary `tmux` config file that works seamlessly with this Neovim config.
