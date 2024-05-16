@@ -1,7 +1,9 @@
-### Description
-This repo is my custom **NvChad config** for **NeoVim**.
+### About this repo:
+This repo is my custom **NvChad config** for **NeoVim**. This is a streamlined, "one-click setup" configuration for Neovim. It comes pre-configured with all necessary plugins and is designed to emulate the aesthetics of a sleek, contemporary editor, as depicted below:
 
-It is **forked** from [NvChad:starter](https://github.com/NvChad/starter) repo. The `starter` repo loads plugins from [NvChad/NvChad](https://github.com/NvChad/NvChad) master repo `V2.5` 
+![Screenshot](showcase.png)
+
+The repo is **forked** from [NvChad:starter](https://github.com/NvChad/starter) repo. The `starter` repo loads plugins from [NvChad/NvChad](https://github.com/NvChad/NvChad) master repo `V2.5` 
 and use it as a base `nvim` config and allows for customisation on top of it using custom `plugins` and `configs` folder defined in the top-level `lua` directory.
 
 This config mainly includes the following:
