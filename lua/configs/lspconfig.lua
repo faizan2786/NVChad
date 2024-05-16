@@ -8,12 +8,14 @@ local capabilities = nvchadconfig.capabilities
 local lspconfig = require "lspconfig" -- define local variable for
                                       -- the current config file
 -- List of LSPs to configure
-local servers = { "pyright", "clangd" }
+local servers = { "pyright", "clangd", "html", "cssls" }
 
 -- define filetypes for each server
 local filetypes = {
   pyright = "python",
   clangd = "cpp",
+  html = "html",
+  cssls = "css",
 }
 
 -- lsps with default config
