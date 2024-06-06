@@ -26,6 +26,7 @@ return {
         "clangd", -- a powerful LSP for C++
         -- (includes linting, static analysis, etc.)
         "clang-format", -- a c++ formatter
+        "gopls", -- an LSP for GO
       },
     },
   },
@@ -47,11 +48,13 @@ return {
         "markdown_inline",
         "html",
         "css",
+        "go",
       },
     },
   },
-  -- load the nvchad's lspconfig for lsp setup
-  -- and our local 'lspconfig' defined in the 'configs' folder
+  -- load the nvchad's lspconfig and
+  -- our local 'lspconfig' defined in the 'configs' folder
+  -- (for various LSP setup)
   {
     "neovim/nvim-lspconfig",
     config = function()
